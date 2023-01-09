@@ -1,0 +1,95 @@
+
+.about-content{
+    display: flex;
+    gap: 30px;
+
+}
+
+.AboutContianer{
+    padding: 30px;
+}
+
+.Card-Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Down-wave{
+    position: absolute;
+    top: 50;
+    height: 40px;
+    width: 100%;
+    z-index: -1;
+}
+
+.Card{
+    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    transition: .2s all;
+    width: 50%;
+    cursor: default;
+}
+
+.about-content:hover .Card {
+    filter: blur(3px);
+    opacity: .5;
+    transform: scale(.98);
+    box-shadow: none;
+}
+
+.about-content:hover .Card:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+    background: orangered;
+    color: white;
+}
+
+.arrows{
+    display: flex;
+    align-items: center;
+}
+
+.left-arrow, .right-arrow{
+cursor: pointer;
+border-radius: 50%;
+font-size: 25px;
+}
+
+.left-arrow:hover, .right-arrow:hover{
+    background-color: white;
+    color: orangered;
+}
+
+@media screen and (max-width: 438px) {
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Card{
+        width: 90%;
+    }
+}
+
+
+
+@media screen and (max-width: 512px) {
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Card{
+        width: 90%;
+    }
+}
+ 
+@media screen and (max-width:810px) {    
+    .Card{
+        height: fit-content;
+        /* overflow-y: scroll; */
+    }
+}
